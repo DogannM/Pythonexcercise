@@ -9,15 +9,31 @@ print("Greetings, " + greetings + "!")
 
 #Simple Arithmetic
 #Create a program that takes two numbers from the user and performs addition, subtraction, multiplication, and division.
-var1 = input("Enter a number: ")
-var2 = input("Enter another number: ")
+var1 = ""
+var2 = ""
 
-if type(var1) is int and type(var2) is int == True :
-    pass
-else:
-    print("Please enter a number")
-    var1 = input("Enter a number not a string ! : ") 
-    var2 = input("Enter another number not a string ! : ")
+while not var1.isdigit():
+    var1 = input("Enter a number: ")
+    if not var1.isdigit():
+        print("Invalid input. Please enter a number.")
+
+while not var2.isdigit():
+    var2 = input("Enter another number: ")
+    if not var2.isdigit():
+        print("Invalid input. Please enter a number.")
+        
+var1 = int(var1)
+var2 = int(var2)
+
+if var1 == 0 or var2 == 0:
+    print("You cannot enter 0 !!")
+    if var1 == 0:
+        var1 = input("Enter a number other than 0: ")
+        var1 = int(var1)
+    if var2 == 0:
+        var2 = input("Enter a number other than 0: ")
+        if var2.isdigit():
+            var2 = int(var2)
 
 print("Addition: " + str(var1 + var2))
 print("Subtraction: " + str(var1 - var2))
