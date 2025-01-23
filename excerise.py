@@ -43,9 +43,33 @@ print("Division: " + str(var1 / var2))
 #Odd or Even
 #Write a program that asks the user for a number and prints whether it is odd or even.
 
+number = int(input("Enter a number: "))
+
+if number % 2 == 0:
+    print("Even")
+else:
+    print("Odd")
+
 #Basic Calculator
 #Create a calculator that performs basic operations (add, subtract, multiply, divide) based on user input.
 
-
+operators = input("Enter an operator (+, -, *, /): ")
+num1 = float(input("Enter the 1st number: "))
+num2 = float(input("Enter the 2nd number: "))
+result = 0 
+if operators == "+":
+    result = num1 + num2
+    print(round(result,2))
+elif operators == "-":
+    result = num1 - num2
+    print(round(result,2))
+elif operators == "*":
+    result = num1 * num2
+    print(round(result,2))
+elif operators == "/":
+    result = num1 / num2
+    print(round(result,2))
+else:
+    print(f"{operators} is not a valid operator.")  
 #Guess the Number
 #Generate a random number between 1 and 100 and let the user guess it, giving hints (higher/lower) until they get it right.
