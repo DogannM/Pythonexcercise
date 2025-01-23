@@ -73,3 +73,14 @@ else:
     print(f"{operators} is not a valid operator.")  
 #Guess the Number
 #Generate a random number between 1 and 100 and let the user guess it, giving hints (higher/lower) until they get it right.
+import random
+var = random.randint(1, 100)
+guess = 0
+while guess != var:
+    guess = int(input("Guess a number between 1 and 100: "))
+    if guess < var:
+        print("Higher")
+    elif guess > var:
+        print("Lower")
+    elif guess == var:
+        print("Correct!")
